@@ -3,21 +3,7 @@ import ReactDOM from 'react-dom';
 import './index.css';
 
 // ========================================
-
-class Quote extends React.Component {
-render()
-{
-return (
-<div>
-CYTATTTTT
-</div>
-);
-
-
-}
-
-}
-
+// https://facebook.github.io/react/docs/handling-events.html
 class GenerateButton extends React.Component {
 
   renderQuote() {
@@ -51,7 +37,6 @@ class App extends React.Component {
       <div>
 
         <GenerateButton />
-         <Quote>
       </div>
 
 
