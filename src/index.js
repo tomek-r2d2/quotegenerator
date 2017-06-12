@@ -3,11 +3,6 @@ import ReactDOM from 'react-dom';
 import './index.css';
 
 
-// css demo anumation
-
-// ========================================
-// https://facebook.github.io/react/docs/handling-events.html
-
 class Quotes {
 
   constructor() {
@@ -26,7 +21,6 @@ class Quotes {
       "Ma ktoś maskę przeciwgazową? Przecież tam się drzwi rozpuszczają od wewnętrznej strony!",
     ];
 
-
     this.authors=["Andrzej Sz",
     "Paulina H.",
     "Krzysztof O.",
@@ -39,7 +33,6 @@ class Quotes {
     "Kamil S"
     ];
 
-
     this.index=null;
     this.lastQuote = null;
   }
@@ -48,22 +41,19 @@ class Quotes {
     let tmp = -1;
     do {
       tmp = Math.floor((Math.random() * this.quotes.length) + 1);
-      console.log(tmp);
-      console.log( this.quotes.length);
     }
     while (tmp === this.lastQuote)
 
 
     this.lastQuote = tmp;
     this.index=tmp-1;
-    return this.quotes[tmp-1];
+    return this.quotes[this.index];
   }
 
   generateAuthor()
   {
     return this.authors[this.index];
   }
-
 }
 
 class App extends React.Component {
@@ -74,7 +64,6 @@ class App extends React.Component {
     this.state = {
       data: '',
       quote: new Quotes(),
-      author: ''
     }
     this.updateState = this.updateState.bind(this);
   };
@@ -91,7 +80,7 @@ class App extends React.Component {
     return (
       <div>
         <button onClick={this.updateState} >Wygeneruj cytat</button>
-        <h4>{this.state.data}</h4>
+         <h4>{this.state.data}</h4>
          <h5 id="author">{this.state.author}</h5>
 
       </div>
@@ -100,4 +89,3 @@ class App extends React.Component {
 }
 
 ReactDOM.render(<App />, document.getElementById("root"));
-
