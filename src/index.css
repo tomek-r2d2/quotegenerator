@@ -61,3 +61,20 @@ background: yellow;
 font: bold
 
 }
+
+#t1
+{
+font-family: Tahoma, Verdana, Segoe, sans-serif;
+	font-size: 24px;
+	font-style: normal;
+	font-variant: normal;
+
+}
+
+#author
+{
+  font-style: italic
+}
+
+
+
