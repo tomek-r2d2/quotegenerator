@@ -3,7 +3,9 @@ Simple app that generates random quote, only for insiders.
 
 tomek.r2d2
 
--- React Stuff --
+![screenshot](inf.png)
+
+---------------------------------------------- React Stuff -------------------------------------
 
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
