@@ -1,9 +1,9 @@
+![screenshot](inf.png)
+
 
 Simple app that generates random quote, only for insiders.
 
 tomek.r2d2
-
-![screenshot](inf.png)
 
 ---------------------------------------------- React Stuff -------------------------------------
 
