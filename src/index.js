@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
+import IconCode from 'react-icons/lib/fa/refresh'
 
 
 class Quotes {
@@ -21,19 +22,19 @@ class Quotes {
       "Ma ktoś maskę przeciwgazową? Przecież tam się drzwi rozpuszczają od wewnętrznej strony!",
     ];
 
-    this.authors=["Andrzej Sz",
-    "Paulina H.",
-    "Krzysztof O.",
-    "Tomasz P.",
-    "Eclipsjusz, faliture test",
-    "Paulina W.",
-    "Krzysztof O",
-    "Krzysztof O",
-    "Krzysztof O",
-    "Kamil S"
+    this.authors = ["Andrzej Sz",
+      "Paulina H.",
+      "Krzysztof O.",
+      "Tomasz P.",
+      "Eclipsjusz, faliture test",
+      "Paulina W.",
+      "Krzysztof O",
+      "Krzysztof O",
+      "Krzysztof O",
+      "Kamil S"
     ];
 
-    this.index=null;
+    this.index = null;
     this.lastQuote = null;
   }
 
@@ -46,12 +47,11 @@ class Quotes {
 
 
     this.lastQuote = tmp;
-    this.index=tmp-1;
+    this.index = tmp - 1;
     return this.quotes[this.index];
   }
 
-  generateAuthor()
-  {
+  generateAuthor() {
     return this.authors[this.index];
   }
 }
@@ -70,22 +70,28 @@ class App extends React.Component {
 
   updateState() {
 
-    this.setState({ 
-      data: "\"" + this.state.quote.generateQuote() +"\"",
-      author: this.state.quote.generateAuthor() 
-   })}
+    this.setState({
+      data: "\"" + this.state.quote.generateQuote() + "\"",
+      author: this.state.quote.generateAuthor()
+    })
+  }
 
   render() {
 
     return (
       <div>
-        <button onClick={this.updateState} >Wygeneruj cytat</button>
-         <h4>{this.state.data}</h4>
-         <h5 id="author">{this.state.author}</h5>
+
+        <h1>
+          <IconCode onClick={this.updateState} alt="Wygeneruj cytat" />
+        </h1>
+
+        <h4>{this.state.data}</h4>
+        <h5 id="author">{this.state.author}</h5>
 
       </div>
     );
   }
 }
+
 
 ReactDOM.render(<App />, document.getElementById("root"));
